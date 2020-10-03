@@ -1,0 +1,26 @@
+{
+  "name": "prestamofrances",
+  "version": "1.0.0",
+  "description": "Calcular prestamo en base al prestamo frances",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegolopez03/PrestamoFrances.git"
+  },
+  "keywords": [
+    "préstamo",
+    "node",
+    "express",
+    "handlebars"
+  ],
+  "author": "Diego López",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegolopez03/PrestamoFrances/issues"
+  },
+  "homepage": "https://github.com/diegolopez03/PrestamoFrances#readme"
+}
