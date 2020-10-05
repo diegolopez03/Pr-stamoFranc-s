@@ -8,7 +8,8 @@ exports.calcularMetodoFrances = (capital, tasaInteres, plazo) => {
     let interes = 0;
     let tasaInteresDecimal = tasaInteres / 100;
     const cuotas = [];
-    let deuda = 0;
+    let capitalSiguiente = 0;
+  
   
     // Transformar los años en meses
     plazo = Math.round(plazo * 12);
@@ -18,19 +19,20 @@ exports.calcularMetodoFrances = (capital, tasaInteres, plazo) => {
       (capital * tasaInteresDecimal) / (1 - (1 + tasaInteresDecimal) ** -plazo);
   
     cuota = cuota.toFixed(2);
-    console.log(cuota);
+    //console.log(cuota);
 
-    console.log('mes'+' '+'capital'+' '+ 'interes'+' '+'cuota'+' '+'deuda');
-    // for
+    //Cálculo de todas las cuotas con ciclo for 
+    console.log('Mes'+' '+'Capital'+' '+ 'iInterés'+' '+'Cuota'+' '+'Deuda');
+    
   for (let i = 1; i <= plazo; i++) {
       interes = capital * tasaInteresDecimal;
-      deuda = cuota - interes; 
-      capital = capital - deuda;
+      capitalSiguiente = cuota - interes; 
+      capital = Math.round(capital - capitalSiguiente);
       interes = interes.toFixed(2);
       capital = capital.toFixed(2);
-      deuda = deuda .toFixed(2);
+      capitalSiguiente = capitalSiguiente .toFixed(2);
       
-      console.log(i+' '+deuda+' '+interes+' '+cuota+' '+capital );
+      console.log(i+'  '+capitalSiguiente+' '+interes+' '+cuota+' '+capital );
     
     }
 
